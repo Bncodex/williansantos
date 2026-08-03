@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Willian Santos | Personal Trainer de Alta Performance & Consultoria Online</title>
+  
+  <!-- SEO & OpenGraph Meta Tags -->
+  <meta name="description" content="Treinamento personalizado de alta performance e consultoria fitness online por Willian Santos. Transformação corporal com foco em resultados reais, saúde e exclusividade.">
+  <meta name="keywords" content="Personal Trainer, Consultoria Online, Willian Santos, Treino Personalizado, Emagrecimento, Hipertrofia, Alta Performance">
+  <meta name="author" content="Willian Santos">
+  <meta property="og:title" content="Willian Santos | Personal Trainer de Alta Performance">
+  <meta property="og:description" content="Transforme seu corpo com acompanhamento individualizado de verdade. Consultoria presencial e online exclusiva.">
+  <meta property="og:image" content="assets/images/WilliamSantos2.jpeg">
+  <meta property="og:url" content="https://www.instagram.com/wsstreinador/">
+  <meta property="og:type" content="website">
+  
+  <!-- Stylesheets, Three.js & Fonts -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- PRELOADER SCREEN -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <!-- Gym/Fitness Creative Icon Glow Container -->
+      <div class="preloader-logo-wrapper">
+        <div class="dumbbells-ring-glow"></div>
+        <img src="assets/images/logow.jpeg" alt="Willian Santos Personal" class="preloader-logo-img">
+        
+        <!-- Rotating Metallic Dumbbell SVG Ring -->
+        <svg class="dumbbell-orbit-svg" viewBox="0 0 100 100">
+          <path class="orbit-track" d="M 50,50 m -42,0 a 42,42 0 1,0 84,0 a 42,42 0 1,0 -84,0" />
+          <path class="orbit-gold-pulse" d="M 50,50 m -42,0 a 42,42 0 1,0 84,0 a 42,42 0 1,0 -84,0" />
+        </svg>
+      </div>
+
+      <div class="preloader-brand">
+        <span class="logo-metallic-text">WILLIAN SANTOS</span>
+        <span class="preloader-tagline">PERSONAL TRAINER • ALTA PERFORMANCE</span>
+      </div>
+
+      <!-- Fitness Progress Container -->
+      <div class="preloader-bar-wrapper">
+        <div class="preloader-bar-bg">
+          <div class="preloader-progress-bar" id="preloader-progress"></div>
+        </div>
+        <div class="preloader-stats">
+          <span class="preloader-status-text">Carregando Treino de Alta Performance...</span>
+          <span class="preloader-percent" id="preloader-percent">0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP SCROLL PROGRESS BAR -->
+  <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+
+  <!-- GOLDEN SPOTLIGHT CURSOR GLOW -->
+  <div class="cursor-spotlight" id="cursor-spotlight"></div>
+
+  <!-- NAVBAR WITH HIGH-END GLASSMORPHISM -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="Willian Santos Home">
+        <img src="assets/images/logow.jpeg" alt="Willian Santos Logo" class="logo-img">
+        <span class="logo-metallic-text">WILLIAN SANTOS</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#resultados" class="nav-link">Resultados</a></li>
+          <li><a href="#planos" class="nav-link">Planos</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="anamnese.html" class="btn btn-gold nav-cta" aria-label="Iniciar Consultoria">
+          Consultoria
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. HERO SECTION (PHOTO LEFT, CONTENT & QUADRADO RIGHT) -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="container hero-grid">
+      
+      <!-- HERO TRAINER PHOTO CARD (LEFT SIDE) -->
+      <div class="hero-media reveal">
+        <div class="hero-img-card">
+          <div class="content">
+            <img src="assets/images/WilliamSantos2.jpeg" alt="Willian Santos Personal Trainer de Alta Performance" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO CONTENT & QUADRADO HIGHLIGHT BOX (RIGHT SIDE) -->
+      <div class="hero-content reveal reveal-delay-2">
+        <h1 class="hero-title">
+          Transforme seu corpo com <span class="text-gold">acompanhamento</span> de verdade.
+        </h1>
+        <p class="hero-subtitle">
+          Treinamento personalizado de alto padrão para quem busca resultados extraordinários, estética refinada, saúde e evolução contínua.
+        </p>
+
+        <!-- LUXURY "QUADRADO" HIGHLIGHT CARD ABOUT WILLIAN -->
+        <div class="willian-hero-card">
+          <div class="willian-card-quote-icon">“</div>
+          <h3 class="willian-card-title">Conheça o Treinador Willian Santos</h3>
+          <p class="willian-card-text">
+            Especialista em biomecânica aplicada, desenvolvimento de força e lapidação corporal. Um método de acompanhamento 100% individualizado focado em entregar a sua melhor versão com máxima eficiência e segurança.
+          </p>
+          <div class="willian-card-footer">
+            <span class="willian-signature">WILLIAN SANTOS</span>
+            <span class="willian-badge-tag">EXCLUSIVIDADE & PERFORMANCE</span>
+          </div>
+        </div>
+
+        <div class="hero-btns">
+          <a href="https://wa.me/5521999576359?text=Ol%C3%A1%20Professor%20Willian,%20gostaria%20de%20conhecer%20sua%20consultoria." target="_blank" class="btn btn-gold btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.299.428 2.502 1.155 3.473l-.759 2.77 2.839-.745c.937.616 2.052.968 3.25.969 3.18 0 5.767-2.587 5.767-5.766.001-3.18-2.585-5.767-5.766-5.767zm3.364 8.163c-.144.405-.837.774-1.17.823-.317.047-.73.076-2.18-.522-1.854-.766-3.053-2.656-3.146-2.78-.093-.124-.754-1.002-.754-1.912 0-.91.477-1.358.647-1.533.17-.175.371-.219.495-.219.124 0 .247.001.351.006.111.005.26-.042.406.309.149.359.508 1.239.553 1.332.045.093.075.201.015.321-.06.12-.09.195-.18.3-.09.105-.189.234-.27.315-.09.09-.184.188-.079.368.105.18.468.772 1.005 1.25.69.616 1.272.808 1.452.898.18.09.285.075.39-.045.105-.12.45-.525.57-.705.12-.18.24-.15.405-.09.165.06 1.05.495 1.23.585.18.09.3.135.345.21.045.075.045.435-.099.84z"/></svg>
+            Agendar Consultoria
+          </a>
+          <a href="#metodologia" class="btn btn-outline btn-lg">
+            Conhecer Método
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-target="500">+500</span>
+            <span class="stat-label">Alunos Transformados</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="10">+10</span>
+            <span class="stat-label">Anos de Experiência</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Resultados Comprovados</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. SOBRE SECTION (COM WEBGL DOT MATRIX CANVAS SHADER) -->
+  <section class="about-section" id="sobre">
+    <canvas id="sobre-canvas"></canvas>
+    <div class="about-vignette"></div>
+
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-container reveal">
+          <div class="about-img-frame about-img-frame-original">
+            <img src="assets/images/WillianSantos.jpeg" alt="Willian Santos em treinamento presencial com alunos" loading="lazy">
+          </div>
+          <div class="about-experience-tag">
+            <span>+10</span>
+            <label>Anos no Mercado</label>
+          </div>
+        </div>
+
+        <div class="about-text-content reveal reveal-delay-2">
+          <div class="section-label">SOBRE O TREINADOR</div>
+          <h2>Autoridade, Ciência e <span class="text-gold">Execução Impecável</span>.</h2>
+          <p class="about-lead">
+            Sou Willian Santos, preparador físico especialista em lapidação corporal, desenvolvimento de força e reabilitação postural.
+          </p>
+          <p class="about-paragraph">
+            Meu objetivo não é prescrever fichas genéricas de academia, mas sim entregar uma arquitetura de treino sob medida. Atuo com pessoas exigentes que valorizam seu tempo e buscam um acompanhamento sério, baseado em ciência fisiológica e biomecânica.
+          </p>
+
+          <div class="about-features-list">
+            <div class="about-feature-item">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Avaliação Biomecânica</span>
+            </div>
+            <div class="about-feature-item">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Suporte Individualizado VIP</span>
+            </div>
+            <div class="about-feature-item">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Protocolos de Ajuste Semanal</span>
+            </div>
+            <div class="about-feature-item">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Foco em Longevidade & Saúde</span>
+            </div>
+          </div>
+
+          <a href="anamnese.html" class="btn btn-gold">
+            Iniciar Minha Avaliação
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. DIFERENCIAIS SECTION -->
+  <section class="diferenciais-section" id="diferenciais">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">EXCLUSIVIDADE & PADRÃO</div>
+        <h2 class="section-title">Por que o acompanhamento é <span class="text-gold">Diferenciado</span>?</h2>
+        <p class="section-description">
+          Cada detalhe do seu programa de treino é desenhado especificamente para o seu biotipo, rotina e metas.
+        </p>
+      </div>
+
+      <div class="diferenciais-grid">
+        <div class="diff-card reveal reveal-delay-1">
+          <div class="diff-num-index">01</div>
+          <div class="diff-icon-box">🎯</div>
+          <h3 class="diff-title">Treino 100% Individual</h3>
+          <p class="diff-desc">Planejamento único feito sob medida. Nada de séries prontas ou modelos automatizados.</p>
+        </div>
+
+        <div class="diff-card reveal reveal-delay-2">
+          <div class="diff-num-index">02</div>
+          <div class="diff-icon-box">📊</div>
+          <h3 class="diff-title">Avaliação Física Detalhada</h3>
+          <p class="diff-desc">Análise postural, composição corporal e padrão de movimento para máxima segurança e eficiência.</p>
+        </div>
+
+        <div class="diff-card reveal reveal-delay-3">
+          <div class="diff-num-index">03</div>
+          <div class="diff-icon-box">⚡</div>
+          <h3 class="diff-title">Correção Postural</h3>
+          <p class="diff-desc">Ajuste de desequilíbrios musculares, prevenindo lesões e maximizando a estética do seu físico.</p>
+        </div>
+
+        <div class="diff-card reveal reveal-delay-1">
+          <div class="diff-num-index">04</div>
+          <div class="diff-icon-box">💬</div>
+          <h3 class="diff-title">Suporte via WhatsApp</h3>
+          <p class="diff-desc">Contato direto comigo para tirar dúvidas, corrigir a execução dos exercícios via vídeo e ajustar cargas.</p>
+        </div>
+
+        <div class="diff-card reveal reveal-delay-2">
+          <div class="diff-num-index">05</div>
+          <div class="diff-icon-box">🔄</div>
+          <h3 class="diff-title">Treinos Atualizados</h3>
+          <p class="diff-desc">Progressão estratégica de estímulos para garantir que você nunca entre em platô de resultados.</p>
+        </div>
+
+        <div class="diff-card reveal reveal-delay-3">
+          <div class="diff-num-index">06</div>
+          <div class="diff-icon-box">👑</div>
+          <h3 class="diff-title">Consultoria Premium</h3>
+          <p class="diff-desc">Acompanhamento completo onde você estiver, pelo aplicativo exclusivo e feedbacks semanais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. RESULTADOS SECTION (ANTES & DEPOIS — CARROSSEL) -->
+  <section class="results-section" id="resultados">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">PROVAS REAIS</div>
+        <h2 class="section-title">Resultados de <span class="text-gold">Alunos Reais</span></h2>
+        <p class="section-description">
+          Arraste o carrossel para navegar entre as transformações. Deslize o divisor central de cada card para revelar o Antes e Depois.
+        </p>
+      </div>
+    </div>
+
+    <!-- FULL-WIDTH CAROUSEL WRAPPER (outside container for edge bleed) -->
+    <div class="results-carousel-wrapper">
+      <div class="results-carousel-track" id="resultsCarousel">
+
+        <!-- Card 1 -->
+        <div class="result-carousel-card">
+          <div class="comparison-slider-container" id="slider1">
+            <div class="badge-tag-before">ANTES</div>
+            <div class="badge-tag-after">DEPOIS</div>
+            <div class="comparison-image after-image" style="background-image: url('assets/images/result1.png');"></div>
+            <div class="comparison-image before-image" style="background-image: url('assets/images/result1.png'); filter: contrast(1.1) brightness(0.78) saturate(0.7);"></div>
+            <div class="slider-handle">
+              <div class="slider-button">↔</div>
+            </div>
+          </div>
+          <div class="result-info">
+            <h3 class="result-client-name">Transformação Estética &amp; Definição</h3>
+            <div class="result-metrics">
+              <span>⚡ -12kg de Gordura</span>
+              <span>💪 +4kg Massa Magra</span>
+              <span>⏱️ 16 Semanas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="result-carousel-card">
+          <div class="comparison-slider-container" id="slider2">
+            <div class="badge-tag-before">ANTES</div>
+            <div class="badge-tag-after">DEPOIS</div>
+            <div class="comparison-image after-image" style="background-image: url('assets/images/result2.png');"></div>
+            <div class="comparison-image before-image" style="background-image: url('assets/images/result2.png'); filter: contrast(1.1) brightness(0.78) saturate(0.7);"></div>
+            <div class="slider-handle">
+              <div class="slider-button">↔</div>
+            </div>
+          </div>
+          <div class="result-info">
+            <h3 class="result-client-name">Recomposição Corporal &amp; Postura</h3>
+            <div class="result-metrics">
+              <span>⚡ Perda de Medidas Abdominais</span>
+              <span>💪 Ajuste Biomecânico</span>
+              <span>⏱️ 12 Semanas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="result-carousel-card">
+          <div class="comparison-slider-container" id="slider3">
+            <div class="badge-tag-before">ANTES</div>
+            <div class="badge-tag-after">DEPOIS</div>
+            <div class="comparison-image after-image" style="background-image: url('assets/images/result1.png');"></div>
+            <div class="comparison-image before-image" style="background-image: url('assets/images/result1.png'); filter: contrast(1.05) brightness(0.75) saturate(0.5);"></div>
+            <div class="slider-handle">
+              <div class="slider-button">↔</div>
+            </div>
+          </div>
+          <div class="result-info">
+            <h3 class="result-client-name">Hipertrofia &amp; Alta Performance</h3>
+            <div class="result-metrics">
+              <span>⚡ +8kg Massa Muscular</span>
+              <span>💪 Força Máxima</span>
+              <span>⏱️ 20 Semanas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="result-carousel-card">
+          <div class="comparison-slider-container" id="slider4">
+            <div class="badge-tag-before">ANTES</div>
+            <div class="badge-tag-after">DEPOIS</div>
+            <div class="comparison-image after-image" style="background-image: url('assets/images/result2.png');"></div>
+            <div class="comparison-image before-image" style="background-image: url('assets/images/result2.png'); filter: contrast(1.1) brightness(0.80) saturate(0.6);"></div>
+            <div class="slider-handle">
+              <div class="slider-button">↔</div>
+            </div>
+          </div>
+          <div class="result-info">
+            <h3 class="result-client-name">Emagrecimento &amp; Saúde</h3>
+            <div class="result-metrics">
+              <span>⚡ -18kg Total</span>
+              <span>💪 Condicionamento Físico</span>
+              <span>⏱️ 24 Semanas</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Navigation -->
+      <div class="carousel-nav">
+        <button class="carousel-arrow carousel-arrow-prev" id="carouselPrev" aria-label="Anterior">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="carousel-dots" id="carouselDots">
+          <span class="carousel-dot active"></span>
+          <span class="carousel-dot"></span>
+          <span class="carousel-dot"></span>
+          <span class="carousel-dot"></span>
+        </div>
+        <button class="carousel-arrow carousel-arrow-next" id="carouselNext" aria-label="Próximo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+
+      <!-- Drag hint -->
+      <p class="carousel-drag-hint">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0m-2 6V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v4"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+        Arraste para navegar &nbsp;|&nbsp;
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        Deslize o divisor para ver a transformação
+      </p>
+    </div>
+  </section>
+
+
+  <!-- 5. METODOLOGIA SECTION -->
+  <section class="methodology-section" id="metodologia">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">PASSO A PASSO</div>
+        <h2 class="section-title">Metodologia de <span class="text-gold">Transformação</span></h2>
+        <p class="section-description">
+          Um processo estruturado de 6 etapas que garante consistência, segurança e rápida evolução.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="timeline-step-num">Passo 01</div>
+            <h3 class="timeline-title">Avaliação Inicial</h3>
+            <p class="timeline-desc">Análise minuciosa do seu estado atual, composição física, histórico de treino e restrições médicas.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-1">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="timeline-step-num">Passo 02</div>
+            <h3 class="timeline-title">Anamnese Completa</h3>
+            <p class="timeline-desc">Preenchimento do formulário exclusivo para mapear sua rotina, preferências, hábitos e objetivo final.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="timeline-step-num">Passo 03</div>
+            <h3 class="timeline-title">Planejamento Estratégico</h3>
+            <p class="timeline-desc">Elaboração do programa individualizado com escolha precisa de exercícios, volumes e intensidades.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-1">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="timeline-step-num">Passo 04</div>
+            <h3 class="timeline-title">Treino Personalizado</h3>
+            <p class="timeline-desc">Envio do seu treino no aplicativo exclusivo com vídeos explicativos de cada movimento.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="timeline-step-num">Passo 05</div>
+            <h3 class="timeline-title">Acompanhamento Contínuo</h3>
+            <p class="timeline-desc">Suporte diário pelo WhatsApp para análise de vídeos, ajuste de cargas e tirar qualquer dúvida.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-3">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="timeline-step-num">Passo 06</div>
+            <h3 class="timeline-title">Resultados Exponenciais</h3>
+            <p class="timeline-desc">Reavaliações periódicas para celebrar metas atingidas e atualizar os estímulos para o próximo nível.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. PLANOS SECTION -->
+  <section class="plans-section" id="planos">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">INVESTIMENTO NO SEU FÍSICO</div>
+        <h2 class="section-title">Escolha seu <span class="text-gold">Plano de Evolução</span></h2>
+        <p class="section-description">
+          Planos desenvolvidos para atender diferentes rotinas com o mesmo padrão de excelência.
+        </p>
+      </div>
+
+      <div class="plans-grid">
+
+        <!-- ══ CARD 1: Consultoria Online ══ -->
+        <div class="ws-plan-card reveal reveal-delay-1">
+          <div class="wpc-pattern-grid"></div>
+          <div class="wpc-overlay-dots"></div>
+          <svg class="wpc-bold-pattern" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><pattern id="bp1" patternUnits="userSpaceOnUse" width="12" height="12"><path d="M-2,2 l4,-4 M0,12 l12,-12 M10,14 l4,-4" stroke="#D4AF37" stroke-width="1.5"/></pattern></defs>
+            <rect width="100" height="100" fill="url(#bp1)"/>
+          </svg>
+
+          <div class="wpc-title-area">
+            <span>Consultoria Online</span>
+            <span class="wpc-tag">ONLINE</span>
+          </div>
+
+          <div class="wpc-body">
+            <p class="wpc-description">Ideal para treinar em qualquer academia ou em casa com orientação profissional de alto nível.</p>
+            <div class="wpc-feature-grid">
+              <div class="wpc-feature-item">
+                <div class="wpc-feature-icon"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="wpc-feature-text">Treino no App</span>
+              </div>
+              <div class="wpc-feature-item">
+                <div class="wpc-feature-icon"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="wpc-feature-text">Anamnese Completa</span>
+              </div>
+              <div class="wpc-feature-item">
+                <div class="wpc-feature-icon"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="wpc-feature-text">WhatsApp Semanal</span>
+              </div>
+              <div class="wpc-feature-item">
+                <div class="wpc-feature-icon"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="wpc-feature-text">Correção por Vídeo</span>
+              </div>
+            </div>
+            <div class="wpc-actions">
+              <div class="wpc-plan-label">
+                <span class="wpc-plan-type">Consultoria</span>
+                <span class="wpc-plan-mode">100% Online</span>
+              </div>
+              <a href="anamnese.html" class="wpc-button">Começar</a>
+            </div>
+          </div>
+          <div class="wpc-accent-shape"></div>
+          <div class="wpc-stamp"><span class="wpc-stamp-text">WS</span></div>
+          <div class="wpc-corner-slice"></div>
+        </div>
+
+        <!-- ══ CARD 2: VIP Premium (Featured) ══ -->
+        <div class="ws-plan-card ws-plan-featured reveal reveal-delay-2">
+          <div class="wpc-pattern-grid"></div>
+          <div class="wpc-overlay-dots"></div>
+          <svg class="wpc-bold-pattern" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><pattern id="bp2" patternUnits="userSpaceOnUse" width="12" height="12"><path d="M-2,2 l4,-4 M0,12 l12,-12 M10,14 l4,-4" stroke="#F4D06F" stroke-width="2"/></pattern></defs>
+            <rect width="100" height="100" fill="url(#bp2)"/>
+          </svg>
+
+          <div class="wpc-title-area wpc-title-featured">
+            <span>Consultoria VIP</span>
+            <span class="wpc-tag wpc-tag-featured">★ VIP</span>
+          </div>
+
+          <div class="wpc-body">
+            <p class="wpc-description">Para quem busca acompanhamento intensivo, suporte diário e resultados acelerados com exclusividade.</p>
+            <div class="wpc-feature-grid">
+              <div class="wpc-feature-item">
+                <div class="wpc-feature-icon wpc-icon-featured"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="wpc-feature-text">Tudo do Online</span>
+              </div>
+              <div class="wpc-feature-item">
+                <div class="wpc-feature-icon wpc-icon-featured"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="wpc-feature-text">Suporte Prioritário</span>
+              </div>
+              <div class="wpc-feature-item">
+                <div class="wpc-feature-icon wpc-icon-featured"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="wpc-feature-text">Ajustes Ilimitados</span>
+              </div>
+              <div class="wpc-feature-item">
+                <div class="wpc-feature-icon wpc-icon-featured"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="wpc-feature-text">Reavaliação Bi-semanal</span>
+              </div>
+            </div>
+            <div class="wpc-actions">
+              <div class="wpc-plan-label">
+                <span class="wpc-plan-type">Mais Escolhido</span>
+                <span class="wpc-plan-mode">Premium VIP</span>
+              </div>
+              <a href="anamnese.html" class="wpc-button wpc-button-featured">Quero VIP</a>
+            </div>
+          </div>
+          <div class="wpc-accent-shape wpc-accent-featured"></div>
+          <div class="wpc-stamp"><span class="wpc-stamp-text">VIP</span></div>
+          <div class="wpc-corner-slice"></div>
+        </div>
+
+        <!-- ══ CARD 3: Presencial Personal ══ -->
+        <div class="ws-plan-card reveal reveal-delay-3">
+          <div class="wpc-pattern-grid"></div>
+          <div class="wpc-overlay-dots"></div>
+          <svg class="wpc-bold-pattern" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><pattern id="bp3" patternUnits="userSpaceOnUse" width="12" height="12"><path d="M-2,2 l4,-4 M0,12 l12,-12 M10,14 l4,-4" stroke="#D4AF37" stroke-width="1.5"/></pattern></defs>
+            <rect width="100" height="100" fill="url(#bp3)"/>
+          </svg>
+
+          <div class="wpc-title-area">
+            <span>Presencial Personal</span>
+            <span class="wpc-tag">EXCLUSIVO</span>
+          </div>
+
+          <div class="wpc-body">
+            <p class="wpc-description">Atendimento individual com acompanhamento presencial em estúdio privado. Vagas estritamente limitadas.</p>
+            <div class="wpc-feature-grid">
+              <div class="wpc-feature-item">
+                <div class="wpc-feature-icon"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="wpc-feature-text">Aulas Individuais</span>
+              </div>
+              <div class="wpc-feature-item">
+                <div class="wpc-feature-icon"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="wpc-feature-text">Biomecânica Real-Time</span>
+              </div>
+              <div class="wpc-feature-item">
+                <div class="wpc-feature-icon"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="wpc-feature-text">Avaliação Presencial</span>
+              </div>
+              <div class="wpc-feature-item">
+                <div class="wpc-feature-icon"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="wpc-feature-text">Vagas Limitadas</span>
+              </div>
+            </div>
+            <div class="wpc-actions">
+              <div class="wpc-plan-label">
+                <span class="wpc-plan-type">Presencial</span>
+                <span class="wpc-plan-mode">Estúdio Privado</span>
+              </div>
+              <a href="https://wa.me/5521999576359?text=Ol%C3%A1%20Willian,%20gostaria%20de%20saber%20a%20disponibilidade%20para%20Personal%20Presencial." target="_blank" class="wpc-button">Verificar Vagas</a>
+            </div>
+          </div>
+          <div class="wpc-accent-shape"></div>
+          <div class="wpc-stamp"><span class="wpc-stamp-text">WS</span></div>
+          <div class="wpc-corner-slice"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. DEPOIMENTOS SECTION -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">DEPOIMENTOS & RECONHECIMENTO</div>
+        <h2 class="section-title">O que dizem os <span class="text-gold">Nossos Alunos</span></h2>
+        <p class="section-description">
+          A satisfação e os resultados de quem vivencia o método Willian Santos.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "Treino há anos mas só comecei a ver mudança real na minha definição muscular depois que ajustamos a biomecânica com o Willian. O acompanhamento via WhatsApp é impecável."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">RC</div>
+            <div class="author-info">
+              <h4>Rodrigo C.</h4>
+              <p>Aluno de Consultoria VIP</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "A anamnese inicial me surpreendeu pela quantidade de detalhes. Ele entendeu perfeitamente minha rotina corrida de trabalho e adaptou um treino rápido e extremamente eficiente."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">ML</div>
+            <div class="author-info">
+              <h4>Mariana L.</h4>
+              <p>Aluna Consultoria Online</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-3">
+          <div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "Eliminei dores nas costas que me incomodavam há anos e ainda ganhei massa magra. Profissionalismo em outro patamar!"
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">GA</div>
+            <div class="author-info">
+              <h4>Gustavo A.</h4>
+              <p>Aluno Presencial & Online</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instagram Integrated Box -->
+      <div class="instagram-box reveal">
+        <div class="ig-content">
+          <div class="section-label">SIGA NO INSTAGRAM</div>
+          <h3>@wsstreinador</h3>
+          <p>Dicas diárias sobre treino, biomecânica, bastidores de resultados e alta performance.</p>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/wsstreinador/" target="_blank" class="btn btn-gold">
+            Seguir Perfil Oficial
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FAQ SECTION -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">PERGUNTAS FREQUENTES</div>
+        <h2 class="section-title">Esclareça suas <span class="text-gold">Dúvidas</span></h2>
+        <p class="section-description">
+          Tire todas as suas dúvidas sobre a consultoria e o modelo de acompanhamento.
+        </p>
+      </div>
+
+      <div class="faq-container reveal">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Como funciona a consultoria online?</span>
+            <div class="faq-icon">↓</div>
+          </div>
+          <div class="faq-answer">
+            <p>Você preenche a Anamnese em nosso site com seus objetivos e dados. Com base nisso, crio seu treino personalizado no aplicativo com vídeos explicativos. Você tem suporte direto pelo WhatsApp para envio de vídeos e correção de execução.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Sou iniciante, a consultoria serve para mim?</span>
+            <div class="faq-icon">↓</div>
+          </div>
+          <div class="faq-answer">
+            <p>Com certeza! O treino é construído do zero respeitando seu nível atual de condicionamento físico, ensinando a postura correta de cada movimento para evoluir com total segurança.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Em quanto tempo começo a ver resultados?</span>
+            <div class="faq-icon">↓</div>
+          </div>
+          <div class="faq-answer">
+            <p>Seguindo o planejamento com constância, os primeiros resultados de postura, disposição e força surgem nas primeiras 2 a 3 semanas. Transformações estéticas marcantes ocorrem entre 8 e 12 semanas.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Como tiro minhas dúvidas durante a semana?</span>
+            <div class="faq-icon">↓</div>
+          </div>
+          <div class="faq-answer">
+            <p>Você terá acesso direto ao meu WhatsApp pessoal. Pode me mandar mensagens, áudios e vídeos executando os exercícios para que eu faça correções e ajustes de carga.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Posso treinar na academia do meu condomínio?</span>
+            <div class="faq-icon">↓</div>
+          </div>
+          <div class="faq-answer">
+            <p>Sim! Adapto o treino aos equipamentos exatos que você tem à disposição, seja em academias grandes, estúdios ou na academia do seu prédio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. CTA FINAL SECTION - RADIAL GOLD GRADIENT TAILWIND PATTERN -->
+  <section class="cta-section">
+    <div class="cta-bg-glow"></div>
+    <div class="container cta-content reveal">
+      <div class="section-label" style="justify-content: center; margin-bottom: 1.5rem;">COMECE SUA TRANSFORMAÇÃO</div>
+      <h2 class="cta-title">Seu próximo resultado <span class="text-gold">começa hoje.</span></h2>
+      <p class="cta-desc">
+        Chega de perder tempo com fichas genéricas. Garanta um acompanhamento exclusivo focado em maximizar o seu potencial físico.
+      </p>
+      <a href="anamnese.html" class="btn btn-gold btn-lg">
+        Iniciar Minha Anamnese Agora
+      </a>
+    </div>
+  </section>
+
+  <!-- 10. FOOTER WITH GOLD RADIAL ACCENT -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="assets/images/logow.jpeg" alt="Willian Santos Logo" class="logo-img-footer">
+            <span class="logo-metallic-text">WILLIAN SANTOS</span>
+          </a>
+          <p>Treinamento personalizado de alta performance, estética e saúde. Exclusividade e resultados comprovados.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-links-title">Navegação</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="#metodologia">Metodologia</a></li>
+            <li><a href="#planos">Planos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-links-title">Contato & Redes</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://www.instagram.com/wsstreinador/" target="_blank">Instagram (@wsstreinador)</a></li>
+            <li><a href="https://wa.me/5521999576359" target="_blank">WhatsApp (21) 99957-6359</a></li>
+            <li><a href="anamnese.html">Formulário de Anamnese</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Willian Santos Personal Trainer. Todos os direitos reservados.</p>
+        <p>Design Editorial de Alto Padrão & Alta Conversão</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="floating-actions">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5521999576359?text=Ol%C3%A1%20Professor%20Willian,%20gostaria%20de%20conhecer%20sua%20consultoria." target="_blank" class="float-btn float-whatsapp" aria-label="Falar no WhatsApp">
+      <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.18c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.12.17 1.76 2.69 4.27 3.77.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.18-.47-.3z"/></svg>
+    </a>
+
+    <!-- Instagram Float Button -->
+    <a href="https://www.instagram.com/wsstreinador/" target="_blank" class="float-btn float-instagram" aria-label="Siga no Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

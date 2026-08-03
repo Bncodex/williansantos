@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anamnese Online | Willian Santos Personal Trainer</title>
+  
+  <!-- SEO & OpenGraph Meta Tags -->
+  <meta name="description" content="Formulário exclusivo de Anamnese Online para a consultoria com o Personal Trainer Willian Santos. Mapeamento completo de objetivos, rotina e histórico de saúde.">
+  <meta name="robots" content="noindex, nofollow">
+  
+  <!-- Stylesheets & Fonts -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="Willian Santos Home">
+        <span class="logo-badge">WS</span>
+        <span>WILLIAN SANTOS</span>
+      </a>
+
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-outline" style="padding: 0.6rem 1.4rem; font-size: 0.9rem;">
+          ← Voltar ao Site
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="anamnese-page">
+    <div class="container">
+      
+      <!-- Top Header & Dynamic Greeting -->
+      <div class="anamnese-header-box">
+        <div id="dynamic-greeting" class="anamnese-greeting">Bom dia</div>
+        <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;">
+          Formulário de <span class="text-gold">Anamnese Individualizada</span>
+        </h1>
+        <p style="font-size: 1.05rem; color: var(--text-secondary); max-width: 680px; margin: 0 auto;">
+          Antes de iniciarmos sua consultoria, preciso conhecer melhor você para montar um planejamento totalmente personalizado, seguro e eficiente. Quanto mais detalhadas forem suas respostas, melhor será sua evolução.
+        </p>
+      </div>
+
+      <!-- PIX Payment Highlight Card -->
+      <div class="pix-box" style="max-width: 860px; margin: 0 auto 2.5rem auto;">
+        <div>
+          <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold-primary); font-weight: 700;">Chave PIX da Consultoria</span>
+          <div class="pix-key-val" id="pix-key">(21) 99957-6359</div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Titular: Willian Santos</p>
+        </div>
+        <button type="button" class="btn btn-outline" id="btn-copy-pix" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+          Copiar Chave PIX
+        </button>
+      </div>
+
+      <!-- MAIN WIZARD CONTAINER CARD -->
+      <div class="anamnese-main-card">
+        
+        <!-- Progress Bar -->
+        <div class="wizard-progress-bar">
+          <div class="wizard-progress-fill" id="progress-fill"></div>
+        </div>
+
+        <!-- Step Indicators -->
+        <div class="wizard-steps-indicator">
+          <div class="step-indicator-item active" data-step="1">
+            <div class="step-number-circle">1</div>
+            <span>Pessoais</span>
+          </div>
+          <div class="step-indicator-item" data-step="2">
+            <div class="step-number-circle">2</div>
+            <span>Rotina</span>
+          </div>
+          <div class="step-indicator-item" data-step="3">
+            <div class="step-number-circle">3</div>
+            <span>Saúde</span>
+          </div>
+          <div class="step-indicator-item" data-step="4">
+            <div class="step-number-circle">4</div>
+            <span>Hábitos</span>
+          </div>
+          <div class="step-indicator-item" data-step="5">
+            <div class="step-number-circle">5</div>
+            <span>Fotos & Envio</span>
+          </div>
+        </div>
+
+        <form id="anamnese-form" novalidate>
+          
+          <!-- STEP 1: DADOS PESSOAIS -->
+          <div class="wizard-step active" data-step="1">
+            <h2 class="step-heading">Etapa 1: <span class="text-gold">Dados Pessoais</span></h2>
+            <p class="step-subtext">Preencha suas informações básicas para identificação.</p>
+
+            <div class="form-grid-1">
+              <div class="form-group">
+                <label class="form-label" for="nome">Nome Completo *</label>
+                <input type="text" id="nome" name="nome" class="form-control" placeholder="Seu nome completo" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="peso">Peso Atual (kg) *</label>
+                <input type="number" id="peso" name="peso" step="0.1" class="form-control" placeholder="Ex: 75.5" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="altura">Altura (cm ou metros) *</label>
+                <input type="text" id="altura" name="altura" class="form-control" placeholder="Ex: 178 cm" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="idade">Idade *</label>
+                <input type="number" id="idade" name="idade" class="form-control" placeholder="Ex: 28" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="data_nascimento">Data de Nascimento *</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" class="form-control" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="email">E-mail de Contato *</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="seuemail@exemplo.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="telefone">Telefone / WhatsApp *</label>
+                <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(21) 99999-9999" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2: OBJETIVOS E ROTINA -->
+          <div class="wizard-step" data-step="2">
+            <h2 class="step-heading">Etapa 2: <span class="text-gold">Objetivos & Rotina</span></h2>
+            <p class="step-subtext">Entenda o que você busca alcançar e como funciona seu dia a dia.</p>
+
+            <div class="form-grid-1">
+              <div class="form-group">
+                <label class="form-label" for="objetivo">Objetivo Atual *</label>
+                <select id="objetivo" name="objetivo" class="form-control" required>
+                  <option value="">Selecione seu objetivo principal</option>
+                  <option value="Emagrecimento e Definição Muscular">Emagrecimento e Definição Muscular</option>
+                  <option value="Hipertrofia e Ganho de Massa Magra">Hipertrofia e Ganho de Massa Magra</option>
+                  <option value="Condicionamento Fisico e Saúde">Condicionamento Físico e Saúde</option>
+                  <option value="Correção Postural e Reabilitação">Correção Postural e Reabilitação</option>
+                  <option value="Alta Performance Esportiva">Alta Performance Esportiva</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="corpo_incomoda">Região do corpo que mais incomoda *</label>
+                <input type="text" id="corpo_incomoda" name="corpo_incomoda" class="form-control" placeholder="Ex: Abdômen, pernas, flancos, postura..." required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="profissao">Profissão *</label>
+                <input type="text" id="profissao" name="profissao" class="form-control" placeholder="Sua profissão" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="horas_trabalho">Horas trabalhadas por dia *</label>
+                <input type="text" id="horas_trabalho" name="horas_trabalho" class="form-control" placeholder="Ex: 8h sentando/em pé" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="tempo_treino_medio">Tempo médio disponível por treino *</label>
+                <select id="tempo_treino_medio" name="tempo_treino_medio" class="form-control" required>
+                  <option value="45 minutos">45 minutos</option>
+                  <option value="60 minutos (1 hora)" selected>60 minutos (1 hora)</option>
+                  <option value="1h15 a 1h30">1h15 a 1h30</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="horario_treino">Horário preferido para treino *</label>
+                <select id="horario_treino" name="horario_treino" class="form-control" required>
+                  <option value="Manhã (5h às 11h)">Manhã (5h às 11h)</option>
+                  <option value="Tarde (12h às 17h)">Tarde (12h às 17h)</option>
+                  <option value="Noite (18h às 22h)">Noite (18h às 22h)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="horas_sono">Horas de sono por noite *</label>
+                <input type="text" id="horas_sono" name="horas_sono" class="form-control" placeholder="Ex: 7 a 8 horas" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="ciclo_menstrual">Dias do ciclo menstrual (quando aplicável)</label>
+                <input type="text" id="ciclo_menstrual" name="ciclo_menstrual" class="form-control" placeholder="Ex: Regular (28 dias) / Irregular / N/A">
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: SAÚDE E HISTÓRICO -->
+          <div class="wizard-step" data-step="3">
+            <h2 class="step-heading">Etapa 3: <span class="text-gold">Saúde & Histórico Clínico</span></h2>
+            <p class="step-subtext">Segurança em primeiro lugar. Relate limitações físicas ou histórico de saúde.</p>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="problemas_saude">Problemas de saúde conhecidos?</label>
+                <input type="text" id="problemas_saude" name="problemas_saude" class="form-control" placeholder="Ex: Hipertensão, diabetes, nenhum..." required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="dores_articulares">Dores articulares ou na coluna?</label>
+                <input type="text" id="dores_articulares" name="dores_articulares" class="form-control" placeholder="Ex: Dor no joelho direito, lombar..." required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="uso_medicamentos">Uso contínuo de medicamentos?</label>
+                <input type="text" id="uso_medicamentos" name="uso_medicamentos" class="form-control" placeholder="Especifique ou coloque 'Nenhum'">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="lesoes_anteriores">Lesões anteriores?</label>
+                <input type="text" id="lesoes_anteriores" name="lesoes_anteriores" class="form-control" placeholder="Ex: Entorse de tornozelo, menisco...">
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="cirurgias">Cirurgias já realizadas?</label>
+                <input type="text" id="cirurgias" name="cirurgias" class="form-control" placeholder="Especifique ou coloque 'Nenhuma'">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="problemas_respiratorios">Problemas respiratórios (Asma, Bronquite)?</label>
+                <input type="text" id="problemas_respiratorios" name="problemas_respiratorios" class="form-control" placeholder="Sim/Não - Detalhes">
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="tonturas">Costuma sentir tonturas nos treinos?</label>
+                <select id="tonturas" name="tonturas" class="form-control">
+                  <option value="Não">Não</option>
+                  <option value="Raramente">Raramente</option>
+                  <option value="Sim">Sim</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="enjoos">Costuma sentir enjoos nos treinos?</label>
+                <select id="enjoos" name="enjoos" class="form-control">
+                  <option value="Não">Não</option>
+                  <option value="Raramente">Raramente</option>
+                  <option value="Sim">Sim</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 4: HÁBITOS E NUTRIÇÃO -->
+          <div class="wizard-step" data-step="4">
+            <h2 class="step-heading">Etapa 4: <span class="text-gold">Hábitos & Estilo de Vida</span></h2>
+            <p class="step-subtext">Mapeamento do seu nível de atividade e hábitos alimentares.</p>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="treinos_semana">Quantos dias por semana pretende treinar? *</label>
+                <select id="treinos_semana" name="treinos_semana" class="form-control" required>
+                  <option value="3 dias por semana">3 dias por semana</option>
+                  <option value="4 dias por semana" selected>4 dias por semana</option>
+                  <option value="5 dias por semana">5 dias por semana</option>
+                  <option value="6 dias por semana">6 dias por semana</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="tempo_pratica">Há quanto tempo pratica atividade física? *</label>
+                <select id="tempo_pratica" name="tempo_pratica" class="form-control" required>
+                  <option value="Iniciante (Nunca treinei ou parei há muito tempo)">Iniciante (Nunca treinei / Parado)</option>
+                  <option value="Intermediário (Treino há menos de 1 ano)">Intermediário (&lt; 1 ano)</option>
+                  <option value="Avançado (Treino há mais de 1 a 2 anos contínuos)">Avançado (&gt; 2 anos contínuos)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="agua_dia">Quantidade de água ingerida por dia (L) *</label>
+                <input type="text" id="agua_dia" name="agua_dia" class="form-control" placeholder="Ex: 2,5 litros" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="bebida_alcoolica">Consumo de bebida alcoólica? *</label>
+                <select id="bebida_alcoolica" name="bebida_alcoolica" class="form-control" required>
+                  <option value="Não consumo">Não consumo</option>
+                  <option value="Socialmente aos finais de semana">Socialmente aos finais de semana</option>
+                  <option value="Frequente (2x a 4x por semana)">Frequente (2x a 4x por semana)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="nutricionista">Acompanhamento nutricional atual? *</label>
+                <select id="nutricionista" name="nutricionista" class="form-control" required>
+                  <option value="Sim, possuo dieta prescrita por Nutricionista">Sim, possuo dieta de Nutricionista</option>
+                  <option value="Não, faço dieta por conta própria">Não, faço dieta por conta própria</option>
+                  <option value="Não faço controle alimentar">Não faço controle alimentar</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="ultraprocessados">Consumo frequente de ultraprocessados?</label>
+                <select id="ultraprocessados" name="ultraprocessados" class="form-control">
+                  <option value="Raramente / Baixo">Raramente / Baixo</option>
+                  <option value="Moderado">Moderado</option>
+                  <option value="Frequente / Alto">Frequente / Alto</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-1">
+              <div class="form-group">
+                <label class="form-label" for="informacao_extra">Existe alguma informação importante que gostaria de compartilhar?</label>
+                <textarea id="informacao_extra" name="informacao_extra" class="form-control" placeholder="Conte algo relevante sobre sua rotina, dores, preferências de exercícios..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 5: UPLOAD DE FOTOS E CONFIRMAÇÃO -->
+          <div class="wizard-step" data-step="5">
+            <h2 class="step-heading">Etapa 5: <span class="text-gold">Fotos Posturais & Confirmação</span></h2>
+            <p class="step-subtext">
+              O envio das fotos é <strong>opcional, porém altamente recomendado</strong> para análise postural e prescrição mais precisa.
+            </p>
+
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: var(--radius-md); margin-bottom: 2rem; font-size: 0.9rem;">
+              <p style="font-weight: 700; color: var(--gold-light); margin-bottom: 0.5rem;">Instruções para Fotos:</p>
+              <p style="margin-bottom: 0.25rem;">👦 <strong>Homens:</strong> Bermuda acima do joelho ou sunga.</p>
+              <p>👩 <strong>Mulheres:</strong> Top + Short ou Biquíni.</p>
+            </div>
+
+            <div class="photo-upload-grid">
+              <div class="upload-card">
+                <div class="upload-icon">📷</div>
+                <div class="upload-title">Foto Frente</div>
+                <p>Postura ereta e relaxada</p>
+                <input type="file" id="foto-frente" accept="image/*" style="display:none;">
+              </div>
+
+              <div class="upload-card">
+                <div class="upload-icon">📷</div>
+                <div class="upload-title">Foto Costas</div>
+                <p>De costas para a câmera</p>
+                <input type="file" id="foto-costas" accept="image/*" style="display:none;">
+              </div>
+
+              <div class="upload-card">
+                <div class="upload-icon">📷</div>
+                <div class="upload-title">Foto Lado</div>
+                <p>Perfil esquerdo ou direito</p>
+                <input type="file" id="foto-lado" accept="image/*" style="display:none;">
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 2rem;">
+              <label style="display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer; font-size: 0.95rem;">
+                <input type="checkbox" id="declaracao_termos" name="declaracao_termos" style="margin-top: 4px; accent-color: var(--gold-primary);" required>
+                <span>Declaro que as informações fornecidas são verdadeiras e estou ciente de iniciar meu planejamento personalizado. *</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Wizard Buttons Footer -->
+          <div class="wizard-nav-btns">
+            <button type="button" class="btn btn-outline" id="btn-prev" style="display:none;">
+              ← Anterior
+            </button>
+            <button type="button" class="btn btn-gold" id="btn-next" style="margin-left: auto;">
+              Próxima Etapa →
+            </button>
+            <button type="submit" class="btn btn-gold" id="btn-submit" style="display:none; margin-left: auto;">
+              Enviar Anamnese
+            </button>
+          </div>
+
+        </form>
+
+        <!-- SUCCESS CONTAINER (Hidden by default) -->
+        <div class="anamnese-success" id="anamnese-success" style="display: none;">
+          <div class="success-icon-box">✓</div>
+          <h2 class="section-title">Anamnese Enviada com <span class="text-gold">Sucesso!</span></h2>
+          <p class="section-description" style="max-width: 600px; margin: 0 auto 2.5rem auto;">
+            Obrigado! Sua anamnese foi registrada com sucesso. Em breve o Professor Willian entrará em contato para dar início à sua transformação.
+          </p>
+          <a id="btn-whatsapp-success" href="#" target="_blank" class="btn btn-gold btn-lg">
+            Finalizar Atendimento no WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

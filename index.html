@@ -74,6 +74,11 @@
           <li><a href="#sobre" class="nav-link">Sobre</a></li>
           <li><a href="#resultados" class="nav-link">Resultados</a></li>
           <li><a href="#planos" class="nav-link">Planos</a></li>
+          <li class="mobile-only-cta">
+            <a href="anamnese.html" class="btn btn-gold nav-mobile-cta">
+              Iniciar Consultoria VIP
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -843,54 +848,91 @@
         </p>
       </div>
 
-      <div class="testimonials-grid">
-        <div class="testimonial-card reveal reveal-delay-1">
-          <div>
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-quote">
-              "Treino há anos mas só comecei a ver mudança real na minha definição muscular depois que ajustamos a biomecânica com o Willian. O acompanhamento via WhatsApp é impecável."
-            </p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">RC</div>
-            <div class="author-info">
-              <h4>Rodrigo C.</h4>
-              <p>Aluno de Consultoria VIP</p>
+      <div class="testimonials-carousel-wrapper reveal">
+        <button class="t-nav-btn t-prev" id="tPrevBtn" aria-label="Depoimento Anterior">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="t-nav-btn t-next" id="tNextBtn" aria-label="Próximo Depoimento">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+
+        <div class="testimonials-carousel-viewport" id="testimonialsViewport">
+          <div class="testimonials-carousel-track" id="testimonialsTrack">
+            
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-quote">
+                "Treino há anos mas só comecei a ver mudança real na minha definição muscular depois que ajustamos a biomecânica com o Willian. O acompanhamento via WhatsApp é impecável."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">RC</div>
+                <div class="author-info">
+                  <h4>Rodrigo C.</h4>
+                  <p>Aluno de Consultoria VIP</p>
+                </div>
+              </div>
             </div>
+
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-quote">
+                "A anamnese inicial me surpreendeu pela quantidade de detalhes. Ele entendeu perfeitamente minha rotina corrida de trabalho e adaptou um treino rápido e extremamente eficiente."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">ML</div>
+                <div class="author-info">
+                  <h4>Mariana L.</h4>
+                  <p>Aluna Consultoria Online</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-quote">
+                "Eliminei dores nas costas que me incomodavam há anos e ainda ganhei massa magra. O nível de cuidado técnico do Willian é em outro patamar!"
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">GA</div>
+                <div class="author-info">
+                  <h4>Gustavo A.</h4>
+                  <p>Aluno Presencial & Online</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-quote">
+                "Consegui perder 11kg mantendo minha rotina social no final de semana. A metodologia de treino do Willian me deu constância de verdade!"
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">FP</div>
+                <div class="author-info">
+                  <h4>Fernanda P.</h4>
+                  <p>Aluna Consultoria VIP</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-quote">
+                "As correções de execução enviadas por vídeo pelo aplicativo me salvaram de lesões e aceleraram meu ganho de massa. Recomendo de olhos fechados."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">BM</div>
+                <div class="author-info">
+                  <h4>Bruno M.</h4>
+                  <p>Aluno Consultoria Online</p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <div class="testimonial-card reveal reveal-delay-2">
-          <div>
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-quote">
-              "A anamnese inicial me surpreendeu pela quantidade de detalhes. Ele entendeu perfeitamente minha rotina corrida de trabalho e adaptou um treino rápido e extremamente eficiente."
-            </p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">ML</div>
-            <div class="author-info">
-              <h4>Mariana L.</h4>
-              <p>Aluna Consultoria Online</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card reveal reveal-delay-3">
-          <div>
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-quote">
-              "Eliminei dores nas costas que me incomodavam há anos e ainda ganhei massa magra. Profissionalismo em outro patamar!"
-            </p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">GA</div>
-            <div class="author-info">
-              <h4>Gustavo A.</h4>
-              <p>Aluno Presencial & Online</p>
-            </div>
-          </div>
-        </div>
+        <div class="testimonials-dots" id="testimonialsDots"></div>
       </div>
 
       <!-- Instagram Integrated Box -->

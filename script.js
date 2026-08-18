@@ -124,12 +124,12 @@ function initThreeAboutShader() {
     u_opacities: { value: [0.15, 0.25, 0.35, 0.45, 0.6, 0.75, 0.85, 0.95, 1.0, 1.0] },
     u_colors: {
       value: [
-        new THREE.Vector3(0.83, 0.68, 0.21), // #D4AF37 (Gold)
-        new THREE.Vector3(0.95, 0.81, 0.43), // #F4D06F (Light Gold)
-        new THREE.Vector3(0.60, 0.48, 0.11), // #9A7B1C (Dark Gold)
-        new THREE.Vector3(0.83, 0.68, 0.21),
-        new THREE.Vector3(0.95, 0.81, 0.43),
-        new THREE.Vector3(0.60, 0.48, 0.11)
+        new THREE.Vector3(0.88, 0.91, 0.94), // Silver (#E2E8F0)
+        new THREE.Vector3(0.97, 0.98, 0.99), // Platinum (#F8FAFC)
+        new THREE.Vector3(0.58, 0.64, 0.72), // Metallic Steel (#94A3B8)
+        new THREE.Vector3(0.88, 0.91, 0.94),
+        new THREE.Vector3(0.97, 0.98, 0.99),
+        new THREE.Vector3(0.58, 0.64, 0.72)
       ]
     },
     u_total_size: { value: 24.0 },
@@ -195,7 +195,7 @@ function initThreeAboutShader() {
           opacity *= step(current_timing_offset, u_time * animation_speed_factor);
           opacity *= clamp((1.0 - step(current_timing_offset + 0.1, u_time * animation_speed_factor)) * 1.25, 1.0, 1.25);
 
-          fragColor = vec4(color, opacity * 0.45);
+          fragColor = vec4(color, opacity * 0.3);
           fragColor.rgb *= fragColor.a;
       }
     `,
@@ -734,3 +734,54 @@ function initAnamneseWizard() {
     localStorage.removeItem(STORAGE_KEY);
   });
 }
+
+/* --------------------------------------------------------------------------
+   14. VIP VIDEO MODAL CONTROLLER
+   -------------------------------------------------------------------------- */
+function openVideoModal(videoSrc, title) {
+  const modal = document.getElementById('video-modal');
+  const player = document.getElementById('modalVideoPlayer');
+  const titleEl = document.getElementById('modalVideoTitle');
+
+  if (!modal || !player) return;
+
+  if (titleEl && title) {
+    titleEl.textContent = title;
+  }
+
+  player.src = videoSrc;
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  // Play video gracefully
+  player.play().catch(err => {
+    console.log('Autoplay visual prevented or video source not found:', err);
+  });
+}
+
+function closeVideoModal(event) {
+  if (event && event.stopPropagation) {
+    event.stopPropagation();
+  }
+
+  const modal = document.getElementById('video-modal');
+  const player = document.getElementById('modalVideoPlayer');
+
+  if (!modal) return;
+
+  if (player) {
+    player.pause();
+    player.src = '';
+  }
+
+  modal.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Close on Escape key press
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeVideoModal();
+  }
+});
+
